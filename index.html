@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -33,14 +34,28 @@
     nav a:hover {
       text-decoration: underline;
     }
-    main {
-      max-width: 900px;
+    .container {
+      display: flex;
+      max-width: 1200px;
       margin: 30px auto;
+      padding: 0 20px;
+    }
+    main {
+      flex: 3;
       background: white;
       color: #0044cc;
       padding: 20px 30px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-right: 20px;
+    }
+    aside {
+      flex: 1;
+      background: #f5f7ff;
+      color: #0044cc;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
     h1, h2 {
       color: #0044cc;
@@ -71,4 +86,45 @@
   <nav>
     <a href="#">首頁</a>
     <a href="#">註冊教學</a>
-    <a href="
+    <a href="#">優惠活動</a>
+    <a href="#">聯絡我們</a>
+  </nav>
+  <div class="container">
+    <main>
+      <section class="step">
+        <div class="step-number">Step 1</div>
+        <h2>點擊註冊按鈕</h2>
+        <p>前往官方網站，點擊右上角的「註冊」按鈕，開始建立帳號。</p>
+        <img src="https://via.placeholder.com/800x400?text=Step+1+假圖" style="width:100%;border-radius:8px;" />
+      </section>
+      <section class="step">
+        <div class="step-number">Step 2</div>
+        <h2>填寫基本資料</h2>
+        <p>依照提示填寫手機號碼、密碼等資訊，完成基本資料輸入。</p>
+        <img src="https://via.placeholder.com/800x400?text=Step+2+假圖" style="width:100%;border-radius:8px;" />
+      </section>
+      <section class="step">
+        <div class="step-number">Step 3</div>
+        <h2>驗證手機號碼</h2>
+        <p>系統會傳送驗證碼至手機，輸入後完成驗證程序。</p>
+        <img src="https://via.placeholder.com/800x400?text=Step+3+假圖" style="width:100%;border-radius:8px;" />
+      </section>
+      <section class="step">
+        <div class="step-number">Step 4</div>
+        <h2>完成註冊</h2>
+        <p>完成所有步驟後，即可登入並享受娛樂城服務。</p>
+        <img src="https://via.placeholder.com/800x400?text=Step+4+假圖" style="width:100%;border-radius:8px;" />
+      </section>
+    </main>
+    <aside>
+      <h2>關於我</h2>
+      <p>嗨，我是您的娛樂城顧問。</p>
+      <p>專注於推廣、註冊教學與最新優惠資訊。</p>
+      <p>歡迎加入我的 Discord 社群，一起賺獎金！</p>
+    </aside>
+  </div>
+  <footer>
+    &copy; 2025 Stake 娛樂城教學網站 - 假資料示範
+  </footer>
+</body>
+</html>
