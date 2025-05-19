@@ -2,45 +2,174 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>STK888 娛樂城</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stake 娛樂城完整介紹與教學</title>
+  <style>
+    body {
+      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      background-color: #ffffff;
+      color: #0044cc;
+      margin: 0; padding: 0;
+      line-height: 1.6;
+    }
+    header, footer {
+      background-color: #0044cc;
+      color: white;
+      padding: 1em 2em;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    nav {
+      margin-top: 0.5em;
+    }
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 2em auto 4em auto;
+      padding: 0 1em;
+    }
+    section {
+      margin-bottom: 3em;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #0044cc;
+    }
+    h2 {
+      border-left: 5px solid #0044cc;
+      padding-left: 10px;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+      font-size: 1.5rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "✅";
+      margin-right: 8px;
+      color: #0044cc;
+    }
+    p {
+      margin: 0.6em 0;
+      font-size: 1rem;
+    }
+    footer p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    @media (max-width: 600px) {
+      header, footer {
+        padding: 1em;
+      }
+      nav a {
+        margin: 0 6px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+  <script>
+    // 點選導覽錨點平滑滾動
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('nav a');
+      for (const link of links) {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const targetID = link.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetID);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      }
+    });
+  </script>
 </head>
 <body>
   <header>
-    <div class="logo">STK888</div>
+    <h1>Stake 娛樂城</h1>
     <nav>
-      <ul>
-        <li><a href="index.html" class="active">首頁</a></li>
-        <li><a href="register.html">註冊教學</a></li>
-        <li><a href="about.html">站長介紹</a></li>
-      </ul>
+      <a href="#intro">網站介紹</a>
+      <a href="#register">註冊教學</a>
+      <a href="#deposit">出入金教學</a>
+      <a href="#about">關於我們</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <h1>歡迎來到 STK888 娛樂城</h1>
-      <p>立即註冊，使用專屬推薦碼享專屬優惠！</p>
-      <a class="btn" href="register.html">查看註冊教學</a>
+    <section id="intro">
+      <h2>什麼是 Stake 娛樂城？</h2>
+      <p>Stake 是全球領先的加密貨幣娛樂平台，成立於 2017 年，至今已有 8 年歷史。2025 年營收達 26 億美元（約新台幣 1,550 億元），平台安全性無庸置疑，並聘請知名藝人 Drake 擔任代言人，代言費高達 1 億美元。</p>
+      <p>平台提供超過 6,000 款老虎機和真人遊戲，並贊助多項國際運動賽事，品牌影響力遍及全球。</p>
+
+      <h3>品牌與運營資訊</h3>
+      <ul>
+        <li>品牌名稱：Stake.com Casino（Stake.com 賭場）</li>
+        <li>運營公司：Medium Rare N.V.</li>
+        <li>賭博許可證：庫拉索（Curacao Antillephone）</li>
+        <li>最低存款：5 美元</li>
+        <li>最低提款：1 美元</li>
+        <li>最高提款額：無限制</li>
+        <li>提款時間：1–15 分鐘（視使用的加密貨幣而定）</li>
+      </ul>
+
+      <h3>安全性與合法性</h3>
+      <p>Stake 賭場持有庫拉索政府核發的 Antillephone NV 博彩執照，並遵守嚴格的規定及定期審核，確保平台的安全與合法性。</p>
     </section>
 
-    <section class="promo">
-      <h2>🔥 最新活動</h2>
-      <img src="images/sample-promo.jpg" alt="活動圖片" />
-      <p>不定期活動內容更新中，敬請關注。</p>
+    <section id="register">
+      <h2>Stake 娛樂城手把手註冊教學</h2>
+      <p>以下為簡單快速的註冊流程，幫助你輕鬆加入 Stake 娛樂城：</p>
+      <ol>
+        <li>進入官方網站，點擊右上角「註冊」按鈕。</li>
+        <li>輸入你的電子郵件、設定密碼，並同意使用條款。</li>
+        <li>完成驗證（郵件驗證或手機驗證）。</li>
+        <li>登入後，可以進行存款與開始遊戲。</li>
+      </ol>
+      <p><strong>注意事項：</strong>推薦碼只可在帳號建立後24小時內使用；未成為官方合作夥伴時，僅能分享邀請連結，並無額外優惠。</p>
     </section>
 
-    <aside class="sidebar">
-      <h3>站長推薦</h3>
-      <img src="images/profile.jpg" alt="站長圖片" />
-      <p>推薦碼：<strong>STK123</strong></p>
-      <p>加入 Discord 社群獲得最新回饋消息！</p>
-    </aside>
+    <section id="deposit">
+      <h2>台幣入出金教學</h2>
+      <p>Stake 娛樂城主要使用加密貨幣交易，以下是基本的台幣入金與出金流程說明：</p>
+      <ol>
+        <li>使用第三方平台（如幣安、幣託等）購買 USDT 或其他加密貨幣。</li>
+        <li>將加密貨幣轉帳至 Stake 個人錢包地址。</li>
+        <li>遊戲中贏取的加密貨幣，可透過相同方式轉回第三方平台換回台幣。</li>
+      </ol>
+      <p>提款通常在 1-15 分鐘內完成，但視區塊鏈網路擁擠度有所差異。</p>
+    </section>
+
+    <section id="about">
+      <h2>關於我們</h2>
+      <p>站長介紹：</p>
+      <p>我是 STK888 的負責人，致力於提供最完整且安全的 Stake 娛樂城教學與最新消息，幫助玩家安心遊玩與快速上手。</p>
+      <p>聯絡方式：</p>
+      <ul>
+        <li>Email: support@stk888.net</li>
+        <li>Discord: STK888#1234</li>
+      </ul>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 STK888 娛樂城</p>
+    <p>© 2025 STK888 All Rights Reserved.</p>
   </footer>
 </body>
 </html>
