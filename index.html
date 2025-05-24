@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
@@ -25,13 +25,9 @@
       margin: 0;
       font-weight: 700;
       font-size: 1.8rem;
-      display: inline-block;
     }
     nav {
       margin-top: 0.5em;
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 2em;
     }
     nav a {
       color: white;
@@ -78,69 +74,93 @@
       font-size: 0.9rem;
       margin: 0;
     }
-    .recommend-code {
-      background-color: #ff4444;
-      color: white;
-      font-weight: 700;
-      font-size: 1.4rem;
-      padding: 0.5em 1em;
-      border-radius: 8px;
-      display: inline-block;
-      margin: 1em 0;
-      text-align: center;
-      letter-spacing: 3px;
+    .promo-images img {
+      max-width: 45%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    table {
+    /* 比較表格 */
+    table.compare {
       width: 100%;
       border-collapse: collapse;
-      margin: 1em 0;
-    }
-    th, td {
-      border: 1px solid #0044cc;
-      padding: 0.8em;
+      margin: 2em 0;
+      font-size: 1rem;
       text-align: center;
-      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    th {
+    table.compare th, table.compare td {
+      border: 1px solid #0044cc;
+      padding: 12px 8px;
+      vertical-align: middle;
+      position: relative;
+    }
+    table.compare th {
       background-color: #0044cc;
       color: white;
-      font-size: 1.1rem;
-    }
-    .stake-win {
-      color: #ff4444;
       font-weight: 700;
-      position: relative;
-      padding-right: 20px;
     }
-    .stake-win::after {
-      content: "✔";
-      color: #ff4444;
+    table.compare tbody tr:nth-child(even) {
+      background-color: #f0f4ff;
+    }
+
+    /* 將勝字放右側 */
+    .win {
+      color: red;
+      font-weight: 700;
       position: absolute;
-      right: 5px;
+      right: 8px;
       top: 50%;
       transform: translateY(-50%);
-      font-size: 1.2rem;
     }
+
+    /* 強調Stake勝出的字體 */
+    .stake-win {
+      color: red;
+      font-weight: 700;
+    }
+
+    /* 手機版響應式 */
     @media (max-width: 600px) {
       header, footer {
         padding: 1em;
-      }
-      nav {
-        display: block;
-        margin-left: 0;
-        margin-top: 0.5em;
       }
       nav a {
         margin: 0 6px;
         font-size: 0.9rem;
       }
-      table, th, td {
-        font-size: 0.9rem;
+      .promo-images img {
+        max-width: 90% !important;
       }
-      .stake-win::after {
-        right: 2px;
-        font-size: 1rem;
+      table.compare, table.compare thead, table.compare tbody, table.compare th, table.compare td, table.compare tr {
+        display: block;
       }
+      table.compare thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      table.compare tr {
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #0044cc;
+      }
+      table.compare td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+      }
+      table.compare td::before {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: 700;
+        color: #0044cc;
+      }
+      table.compare td:nth-of-type(1)::before { content: "項目"; }
+      table.compare td:nth-of-type(2)::before { content: "台版娛樂城"; }
+      table.compare td:nth-of-type(3)::before { content: "Stake 娛樂城"; }
     }
   </style>
   <script>
@@ -164,7 +184,7 @@
   <header>
     <h1>Stake 娛樂城</h1>
     <nav>
-      <a href="#intro">網站介紹</a>
+      <a href="#promo">網站介紹</a>
       <a href="#register">註冊教學</a>
       <a href="#deposit">出入金教學</a>
       <a href="#about">關於我們</a>
@@ -172,10 +192,25 @@
   </header>
 
   <main>
-    <div class="recommend-code" aria-label="推薦碼">推薦碼：STK888</div>
+    <section id="promo" style="background-color: #f0f4ff; text-align: center; padding: 3em 1em; border: none; margin-bottom: 4em;">
+      <h2 style="color: #0044cc; font-size: 2rem; margin-bottom: 1rem;">
+        是不是常常質疑台版娛樂城的虛假倍率？
+      </h2>
+      <p style="font-size: 1.2rem; margin-bottom: 1.5em;">
+        不要再信 <strong>雷X之槌</strong>、<strong>X特</strong>！今天推薦你國外最多人遊玩平台。
+      </p>
+      <div class="promo-images" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1em; margin-bottom: 2em;">
+        <img src="images/fakecasino.jpg" alt="虛假倍率示意圖" />
+        <img src="images/stakefair.jpg" alt="Stake 公平遊戲示意圖" />
+      </div>
+      <a href="#register" style="background-color: #0044cc; color: white; padding: 0.8em 1.5em; text-decoration: none; font-weight: bold; border-radius: 8px;">
+        立即註冊，體驗真實勝率
+      </a>
+    </section>
 
     <section id="intro">
       <h2>什麼是 Stake 娛樂城？</h2>
+      <img src="stake-home.jpg" alt="Stake 娛樂城首頁圖片" style="width:100%; max-height:400px; object-fit:cover; margin-bottom:1em;" />
       <p>Stake 是全球領先的加密貨幣娛樂平台，成立於 2017 年，至今已有 8 年歷史。2025 年營收達 26 億美元（約新台幣 1,550 億元），平台安全性無庸置疑，並聘請知名藝人 Drake 擔任代言人，代言費高達 1 億美元。</p>
       <p>平台提供超過 6,000 款老虎機和真人遊戲，並贊助多項國際運動賽事，品牌影響力遍及全球。</p>
 
@@ -194,51 +229,52 @@
       <p>Stake 賭場持有庫拉索政府核發的 Antillephone NV 博彩執照，並遵守嚴格的規定及定期審核，確保平台的安全與合法性。</p>
     </section>
 
+    <!-- 新增比較表格區 -->
     <section id="compare">
-      <h2>台版娛樂城 vs Stake 比較表</h2>
-      <table>
+      <h2>台版娛樂城 vs Stake 娛樂城 比較表</h2>
+      <table class="compare" role="table" aria-label="台版娛樂城與Stake娛樂城的比較">
         <thead>
           <tr>
-            <th>項目</th>
-            <th>台版娛樂城</th>
-            <th class="stake-win">Stake</th>
+            <th scope="col">項目</th>
+            <th scope="col">台版娛樂城</th>
+            <th scope="col">Stake 娛樂城</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>安全性</td>
-            <td>多為非正規平台，風險較高</td>
-            <td class="stake-win">具庫拉索牌照，合法安全✔</td>
+            <td>倍率真實性</td>
+            <td>多有疑慮，存在虛假倍率風險</td>
+            <td class="stake-win">透明公正，區塊鏈記錄可查<span class="win">勝</span></td>
           </tr>
           <tr>
-            <td>遊戲款式</td>
-            <td>款式有限，部分為虛假倍率</td>
-            <td class="stake-win">超過6,000款老虎機及真人遊戲✔</td>
+            <td>遊戲種類</td>
+            <td>遊戲較少且重複</td>
+            <td class="stake-win">超過 6,000 款老虎機及真人遊戲<span class="win">勝</span></td>
           </tr>
           <tr>
-            <td>勝率</td>
-            <td>莊家勝率約3.5%，不透明</td>
-            <td class="stake-win">公平公開，隨時查證勝率✔</td>
+            <td>提款速度</td>
+            <td>常有延遲，需人工審核</td>
+            <td class="stake-win">1–15 分鐘快速提款<span class="win">勝</span></td>
           </tr>
           <tr>
-            <td>提款方式</td>
-            <td>通常一天一次且有限額</td>
-            <td class="stake-win">不限次數，最低1美元即可提款✔</td>
+            <td>最低存提款</td>
+            <td>較高門檻，且限制多</td>
+            <td class="stake-win">最低存款 5 美元，提款 1 美元起<span class="win">勝</span></td>
           </tr>
           <tr>
-            <td>品牌代言</td>
-            <td>無大型代言人</td>
-            <td class="stake-win">Drake 1億美金代言✔</td>
+            <td>代言與信譽</td>
+            <td>多無知名代言，信譽存疑</td>
+            <td class="stake-win">Drake 代言，全球知名度高<span class="win">勝</span></td>
           </tr>
           <tr>
-            <td>運動贊助</td>
-            <td>無國際運動賽事贊助</td>
-            <td class="stake-win">贊助 UFC、英超 Everton FC、Watford FC、F1賽車隊✔</td>
+            <td>合法執照</td>
+            <td>多為灰色地帶，合規不明</td>
+            <td class="stake-win">持有庫拉索合法博彩許可證<span class="win">勝</span></td>
           </tr>
           <tr>
-            <td>營收規模</td>
-            <td>未知或較小</td>
-            <td class="stake-win">2025年營收26億美元✔</td>
+            <td>付款方式</td>
+            <td>多用傳統銀行，限制較多</td>
+            <td class="stake-win">主打加密貨幣，快速便捷<span class="win">勝</span></td>
           </tr>
         </tbody>
       </table>
@@ -254,7 +290,6 @@
         <li>登入後，可以進行存款與開始遊戲。</li>
       </ol>
       <p><strong>注意事項：</strong>推薦碼只可在帳號建立後24小時內使用；未成為官方合作夥伴時，僅能分享邀請連結，並無額外優惠。</p>
-      <div class="recommend-code">推薦碼：STK888</div>
     </section>
 
     <section id="deposit">
