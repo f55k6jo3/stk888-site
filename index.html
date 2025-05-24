@@ -1,23 +1,6 @@
-<section id="intro">
-  <img src="stake-home.jpg" alt="Stake 娛樂城首頁圖片" style="width:100%; max-height:400px; object-fit:cover; margin-bottom:1em;" />
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<section style="background-color: #f0f4ff; text-align: center; padding: 3em 1em;">
-  <h2 style="color: #0044cc; font-size: 2rem; margin-bottom: 1rem;">
-    是不是常常質疑台版娛樂城的虛假倍率？
-  </h2>
-  <p style="font-size: 1.2rem; margin-bottom: 1.5em;">
-    不要再信 <strong>雷X之槌</strong>、<strong>X特</strong> ！今天推薦你國外最多人遊玩平台。
-  </p>
-  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1em; margin-bottom: 2em;">
-    <img src="images/fakecasino.jpg" alt="虛假倍率示意圖" style="max-width: 45%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-    <img src="images/stakefair.jpg" alt="Stake 公平遊戲示意圖" style="max-width: 45%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-  </div>
-  <a href="#register" style="background-color: #0044cc; color: white; padding: 0.8em 1.5em; text-decoration: none; font-weight: bold; border-radius: 8px;">
-    立即註冊，體驗真實勝率
-  </a>
-</section>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Stake 娛樂城完整介紹與教學</title>
@@ -91,6 +74,32 @@
       font-size: 0.9rem;
       margin: 0;
     }
+    .promo-images img {
+      max-width: 45%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    /* 比較表格 */
+    table.compare {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2em 0;
+      font-size: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    table.compare th, table.compare td {
+      border: 1px solid #0044cc;
+      padding: 12px 8px;
+    }
+    table.compare th {
+      background-color: #0044cc;
+      color: white;
+      font-weight: 700;
+    }
+    table.compare tbody tr:nth-child(even) {
+      background-color: #f0f4ff;
+    }
     @media (max-width: 600px) {
       header, footer {
         padding: 1em;
@@ -99,6 +108,39 @@
         margin: 0 6px;
         font-size: 0.9rem;
       }
+      .promo-images img {
+        max-width: 90% !important;
+      }
+      table.compare, table.compare thead, table.compare tbody, table.compare th, table.compare td, table.compare tr {
+        display: block;
+      }
+      table.compare thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      table.compare tr {
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #0044cc;
+      }
+      table.compare td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+      }
+      table.compare td::before {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: 700;
+        color: #0044cc;
+      }
+      table.compare td:nth-of-type(1)::before { content: "項目"; }
+      table.compare td:nth-of-type(2)::before { content: "台版娛樂城"; }
+      table.compare td:nth-of-type(3)::before { content: "Stake 娛樂城"; }
     }
   </style>
   <script>
@@ -122,7 +164,7 @@
   <header>
     <h1>Stake 娛樂城</h1>
     <nav>
-      <a href="#intro">網站介紹</a>
+      <a href="#promo">網站介紹</a>
       <a href="#register">註冊教學</a>
       <a href="#deposit">出入金教學</a>
       <a href="#about">關於我們</a>
@@ -130,8 +172,25 @@
   </header>
 
   <main>
+    <section id="promo" style="background-color: #f0f4ff; text-align: center; padding: 3em 1em; border: none; margin-bottom: 4em;">
+      <h2 style="color: #0044cc; font-size: 2rem; margin-bottom: 1rem;">
+        是不是常常質疑台版娛樂城的虛假倍率？
+      </h2>
+      <p style="font-size: 1.2rem; margin-bottom: 1.5em;">
+        不要再信 <strong>雷X之槌</strong>、<strong>X特</strong>！今天推薦你國外最多人遊玩平台。
+      </p>
+      <div class="promo-images" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1em; margin-bottom: 2em;">
+        <img src="images/fakecasino.jpg" alt="虛假倍率示意圖" />
+        <img src="images/stakefair.jpg" alt="Stake 公平遊戲示意圖" />
+      </div>
+      <a href="#register" style="background-color: #0044cc; color: white; padding: 0.8em 1.5em; text-decoration: none; font-weight: bold; border-radius: 8px;">
+        立即註冊，體驗真實勝率
+      </a>
+    </section>
+
     <section id="intro">
       <h2>什麼是 Stake 娛樂城？</h2>
+      <img src="stake-home.jpg" alt="Stake 娛樂城首頁圖片" style="width:100%; max-height:400px; object-fit:cover; margin-bottom:1em;" />
       <p>Stake 是全球領先的加密貨幣娛樂平台，成立於 2017 年，至今已有 8 年歷史。2025 年營收達 26 億美元（約新台幣 1,550 億元），平台安全性無庸置疑，並聘請知名藝人 Drake 擔任代言人，代言費高達 1 億美元。</p>
       <p>平台提供超過 6,000 款老虎機和真人遊戲，並贊助多項國際運動賽事，品牌影響力遍及全球。</p>
 
@@ -148,6 +207,57 @@
 
       <h3>安全性與合法性</h3>
       <p>Stake 賭場持有庫拉索政府核發的 Antillephone NV 博彩執照，並遵守嚴格的規定及定期審核，確保平台的安全與合法性。</p>
+    </section>
+
+    <!-- 新增比較表格區 -->
+    <section id="compare">
+      <h2>台版娛樂城 vs Stake 娛樂城 比較表</h2>
+      <table class="compare" role="table" aria-label="台版娛樂城與Stake娛樂城的比較">
+        <thead>
+          <tr>
+            <th scope="col">項目</th>
+            <th scope="col">台版娛樂城</th>
+            <th scope="col">Stake 娛樂城</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>倍率真實性</td>
+            <td>多有疑慮，存在虛假倍率風險</td>
+            <td>透明公正，區塊鏈記錄可查</td>
+          </tr>
+          <tr>
+            <td>遊戲種類</td>
+            <td>遊戲較少且重複</td>
+            <td>超過 6,000 款老虎機及真人遊戲</td>
+          </tr>
+          <tr>
+            <td>提款速度</td>
+            <td>常有延遲，需人工審核</td>
+            <td>1–15 分鐘快速提款</td>
+          </tr>
+          <tr>
+            <td>最低存提款</td>
+            <td>較高門檻，且限制多</td>
+            <td>最低存款 5 美元，提款 1 美元起</td>
+          </tr>
+          <tr>
+            <td>代言與信譽</td>
+            <td>多無知名代言，信譽存疑</td>
+            <td>Drake 代言，全球知名度高</td>
+          </tr>
+          <tr>
+            <td>合法執照</td>
+            <td>多為灰色地帶，合規不明</td>
+            <td>持有庫拉索合法博彩許可證</td>
+          </tr>
+          <tr>
+            <td>付款方式</td>
+            <td>多用傳統銀行，限制較多</td>
+            <td>主打加密貨幣，快速便捷</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section id="register">
