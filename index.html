@@ -160,18 +160,79 @@
       }
     });
   </script>
-</head>
-<body>
-  <header>
+<header>
+  <div class="header-content">
+    <img src="images/77.png" alt="Logo" class="logo" />
     <h1>Stake 娛樂城</h1>
-    <nav>
-      <a href="#promo">網站介紹</a>
-      <a href="#register">註冊教學</a>
-      <a href="#deposit">獎勵介紹</a>
-      <a href="#about">關於我們</a>
-    </nav>
-  </header>
+    <img src="images/88.gif" alt="GIF" class="gif-banner" />
+  </div>
+  <nav>
+    <a href="#promo">網站介紹</a>
+    <a href="#register">註冊教學</a>
+    <a href="#deposit">獎勵介紹</a>
+    <a href="#about">關於我們</a>
+  </nav>
+</header>
 
+<style>
+  header {
+    background-color: #0044cc;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .logo {
+    height: 50px;
+  }
+  .gif-banner {
+    height: 60px;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    flex-grow: 1;
+    text-align: center;
+  }
+  nav {
+    margin-top: 0.5em;
+  }
+  nav a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .header-content {
+      flex-direction: column;
+      gap: 6px;
+    }
+    .gif-banner {
+      height: 50px;
+    }
+    header h1 {
+      font-size: 1.4rem;
+    }
+  }
+</style>
   <main>
     <section id="promo" style="background-color: #f0f4ff; text-align: center; padding: 3em 1em; border: none; margin-bottom: 4em;">
       <h2 style="color: #0044cc; font-size: 2rem; margin-bottom: 1rem;">
