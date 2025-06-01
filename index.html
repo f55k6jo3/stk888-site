@@ -242,8 +242,11 @@
   <div class="header-content">
     <img src="images/77.png" alt="Logo" class="logo" />
     <h1>Stake 娛樂城</h1>
+    <button id="menu-toggle" aria-label="切換選單">
+      ☰
+    </button>
   </div>
-  <nav>
+  <nav id="nav-menu">
     <a href="#promo">網站介紹</a>
     <a href="#register">註冊教學</a>
     <a href="#deposit">獎勵介紹</a>
@@ -253,8 +256,8 @@
 
 <style>
   header {
-    background-color: #f2f2f2; /* 淺灰底 */
-    color: #333333; /* 深灰字色 */
+    background-color: #444444; /* 深灰色 */
+    color: white;
     padding: 1em 2em;
     text-align: center;
     position: sticky;
@@ -265,9 +268,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
     max-width: 900px;
     margin: 0 auto;
+    gap: 10px;
   }
   .logo {
     height: 50px;
@@ -281,10 +284,12 @@
   }
   nav {
     margin-top: 0.5em;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
   }
   nav a {
-    color: #333333; /* 深灰色 */
-    margin: 0 12px;
+    color: white;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
@@ -294,10 +299,19 @@
     text-decoration: underline;
   }
 
+  /* 漢堡按鈕初始隱藏 */
+  #menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  /* 手機版樣式 */
   @media (max-width: 600px) {
     .header-content {
-      flex-direction: column;
-      align-items: center;
       gap: 8px;
     }
     .logo {
@@ -307,20 +321,28 @@
       font-size: 1.4rem;
     }
     nav {
-      margin-top: 0.5em;
-      display: flex;
       flex-direction: column;
-      gap: 8px;
-      align-items: center;
+      gap: 12px;
+      margin-top: 0.5em;
+      display: none; /* 預設隱藏 */
     }
-    nav a {
-      font-size: 1.1rem;
-      padding: 8px 0;
-      margin: 0;
-      color: #333333;
+    nav.show {
+      display: flex; /* 點擊漢堡顯示 */
+    }
+    #menu-toggle {
+      display: block; /* 顯示漢堡按鈕 */
     }
   }
 </style>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
   <main>
     <section id="promo" style="background-color: #f0f4ff; text-align: center; padding: 3em 1em; border: none; margin-bottom: 4em;">
       <h2 style="color: #0044cc; font-size: 2rem; margin-bottom: 1rem;">
