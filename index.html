@@ -238,22 +238,23 @@
     <img src="images/right.gif" alt="右側廣告" />
   </div>
 
-  <header>
-    <div class="header-content">
-      <img src="images/77.png" alt="Logo" class="logo" />
-      <h1>Stake 娛樂城</h1>
-    </div>
-    <nav>
-      <a href="#promo">網站介紹</a>
-      <a href="#register">註冊教學</a>
-      <a href="#deposit">獎勵介紹</a>
-      <a href="#about">關於我們</a>
-    </nav>
-  </header>
+<header>
+  <div class="header-content">
+    <img src="images/77.png" alt="Logo" class="logo" />
+    <h1>Stake 娛樂城</h1>
+  </div>
+  <nav>
+    <a href="#promo">網站介紹</a>
+    <a href="#register">註冊教學</a>
+    <a href="#deposit">獎勵介紹</a>
+    <a href="#about">關於我們</a>
+  </nav>
+</header>
+
 <style>
   header {
-    background-color: #0044cc;
-    color: white;
+    background-color: #f2f2f2; /* 淺灰底 */
+    color: #333333; /* 深灰字色 */
     padding: 1em 2em;
     text-align: center;
     position: sticky;
@@ -271,9 +272,6 @@
   .logo {
     height: 50px;
   }
-  .gif-banner {
-    height: 40px;
-  }
   header h1 {
     margin: 0;
     font-weight: 700;
@@ -285,7 +283,7 @@
     margin-top: 0.5em;
   }
   nav a {
-    color: white;
+    color: #333333; /* 深灰色 */
     margin: 0 12px;
     text-decoration: none;
     font-weight: 600;
@@ -299,13 +297,27 @@
   @media (max-width: 600px) {
     .header-content {
       flex-direction: column;
-      gap: 6px;
+      align-items: center;
+      gap: 8px;
     }
-    .gif-banner {
-      height: 50px;
+    .logo {
+      height: 40px;
     }
     header h1 {
       font-size: 1.4rem;
+    }
+    nav {
+      margin-top: 0.5em;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+    }
+    nav a {
+      font-size: 1.1rem;
+      padding: 8px 0;
+      margin: 0;
+      color: #333333;
     }
   }
 </style>
