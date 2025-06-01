@@ -1,5 +1,4 @@
-
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
@@ -22,10 +21,27 @@
       top: 0;
       z-index: 1000;
     }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1em;
+    }
+    .logo {
+      height: 40px;
+    }
+    .gif-banner {
+      height: 50px;
+    }
     header h1 {
       margin: 0;
       font-weight: 700;
       font-size: 1.8rem;
+      flex-grow: 1;
+      text-align: center;
     }
     nav {
       margin-top: 0.5em;
@@ -41,6 +57,28 @@
     nav a:hover {
       text-decoration: underline;
     }
+
+    /* 側邊廣告（桌機） */
+    .side-ad {
+      position: fixed;
+      top: 100px;
+      width: 120px;
+      height: 600px;
+      z-index: 999;
+      display: block;
+    }
+    .left-ad {
+      left: 0;
+    }
+    .right-ad {
+      right: 0;
+    }
+    .side-ad img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
     main {
       max-width: 900px;
       margin: 2em auto 4em auto;
@@ -80,72 +118,36 @@
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    /* 比較表格 */
-    table.compare {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2em 0;
-      font-size: 1rem;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    @media (max-width: 768px) {
+      .side-ad {
+        display: none;
+      }
     }
-    table.compare th, table.compare td {
-      border: 1px solid #0044cc;
-      padding: 12px 8px;
-    }
-    table.compare th {
-      background-color: #0044cc;
-      color: white;
-      font-weight: 700;
-    }
-    table.compare tbody tr:nth-child(even) {
-      background-color: #f0f4ff;
-    }
+
     @media (max-width: 600px) {
-      header, footer {
-        padding: 1em;
+      .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .logo {
+        height: 30px;
+      }
+      .gif-banner {
+        height: 40px;
+      }
+      header h1 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0 10px;
       }
       nav a {
-        margin: 0 6px;
+        margin: 0 8px;
         font-size: 0.9rem;
       }
-      .promo-images img {
-        max-width: 90% !important;
-      }
-      table.compare, table.compare thead, table.compare tbody, table.compare th, table.compare td, table.compare tr {
-        display: block;
-      }
-      table.compare thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-      }
-      table.compare tr {
-        margin-bottom: 1rem;
-        border-bottom: 2px solid #0044cc;
-      }
-      table.compare td {
-        border: none;
-        position: relative;
-        padding-left: 50%;
-        text-align: left;
-      }
-      table.compare td::before {
-        position: absolute;
-        top: 12px;
-        left: 10px;
-        width: 45%;
-        white-space: nowrap;
-        font-weight: 700;
-        color: #0044cc;
-      }
-      table.compare td:nth-of-type(1)::before { content: "項目"; }
-      table.compare td:nth-of-type(2)::before { content: "台版娛樂城"; }
-      table.compare td:nth-of-type(3)::before { content: "Stake 娛樂城"; }
     }
   </style>
   <script>
-    // 點選導覽錨點平滑滾動
     document.addEventListener('DOMContentLoaded', () => {
       const links = document.querySelectorAll('nav a');
       for (const link of links) {
@@ -160,20 +162,29 @@
       }
     });
   </script>
-<header>
-  <div class="header-content">
-    <img src="images/77.png" alt="Logo" class="logo" />
-    <h1>Stake 娛樂城</h1>
-    <img src="images/88.gif" alt="GIF" class="gif-banner" />
+</head>
+<body>
+  <!-- 側邊廣告區塊 -->
+  <div class="side-ad left-ad">
+    <img src="images/left.gif" alt="左側廣告" />
   </div>
-  <nav>
-    <a href="#promo">網站介紹</a>
-    <a href="#register">註冊教學</a>
-    <a href="#deposit">獎勵介紹</a>
-    <a href="#about">關於我們</a>
-  </nav>
-</header>
+  <div class="side-ad right-ad">
+    <img src="images/right.gif" alt="右側廣告" />
+  </div>
 
+  <header>
+    <div class="header-content">
+      <img src="images/77.png" alt="Logo" class="logo" />
+      <h1>Stake 娛樂城</h1>
+      <img src="images/88.gif" alt="GIF" class="gif-banner" />
+    </div>
+    <nav>
+      <a href="#promo">網站介紹</a>
+      <a href="#register">註冊教學</a>
+      <a href="#deposit">獎勵介紹</a>
+      <a href="#about">關於我們</a>
+    </nav>
+  </header>
 <style>
   header {
     background-color: #0044cc;
