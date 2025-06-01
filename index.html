@@ -198,11 +198,37 @@
     }
 
     /* 900px以下隱藏側邊廣告 */
-    @media (max-width: 900px) {
-      .side-ad {
-        display: none;
-      }
-    }
+   @media (max-width: 600px) {
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+  }
+
+  .logo {
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  header h1 {
+    font-size: 1rem;
+    margin: 0 10px;
+    text-align: center;
+    flex-grow: 1;
+    line-height: 1.2;
+  }
+
+  .gif-banner {
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  nav a {
+    margin: 0 6px;
+    font-size: 0.85rem;
+  }
+}
   </style>
 
   <script>
