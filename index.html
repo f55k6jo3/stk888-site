@@ -125,25 +125,47 @@
       }
     }
 
+    /* 手機版調整：Logo 左，標題中間，GIF 右 */
     @media (max-width: 600px) {
       .header-content {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 0 1em;
       }
       .logo {
         height: 30px;
+        flex-shrink: 0;
+      }
+      header h1 {
+        flex-grow: 1;
+        margin: 0 10px;
+        font-size: 1.2rem;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .gif-banner {
         height: 40px;
-      }
-      header h1 {
-        font-size: 1.2rem;
-        text-align: center;
-        margin: 0 10px;
+        flex-shrink: 0;
       }
       nav a {
         margin: 0 8px;
         font-size: 0.9rem;
+      }
+    }
+
+    /* 極窄螢幕允許標題換行 */
+    @media (max-width: 400px) {
+      .header-content {
+        flex-wrap: wrap;
+      }
+      header h1 {
+        flex-basis: 100%;
+        margin: 0.5em 0;
       }
     }
   </style>
