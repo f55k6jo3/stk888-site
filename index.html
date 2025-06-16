@@ -226,29 +226,38 @@ img {
 
 </style>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const links = document.querySelectorAll('nav a');
-      for (const link of links) {
+  
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('nav a').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
         link.addEventListener('click', e => {
           e.preventDefault();
-          const targetID = link.getAttribute('href').substring(1);
+          const targetID = href.substring(1);
           const targetSection = document.getElementById(targetID);
           if (targetSection) {
             targetSection.scrollIntoView({ behavior: 'smooth' });
           }
         });
       }
-
-      // 動畫結束後啟用持續浮動效果
-      const items = document.querySelectorAll('.promo-item');
-      items.forEach(item => {
-        item.addEventListener('animationend', () => {
-          item.classList.add('floating');
-        }, { once: true });
-      });
     });
-  </script>
+
+    const items = document.querySelectorAll('.promo-item');
+    items.forEach(item => {
+      item.addEventListener('animationend', () => {
+        item.classList.add('floating');
+      }, { once: true });
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    menuToggle?.addEventListener('click', () => {
+      navMenu?.classList.toggle('show');
+    });
+  });
+</script>
+
 </head>
 <body>
   <!-- 側邊廣告區塊 -->
@@ -374,14 +383,38 @@ img {
 
 </style>
 
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
 
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('nav a').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const targetID = href.substring(1);
+          const targetSection = document.getElementById(targetID);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      }
+    });
+
+    const items = document.querySelectorAll('.promo-item');
+    items.forEach(item => {
+      item.addEventListener('animationend', () => {
+        item.classList.add('floating');
+      }, { once: true });
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    menuToggle?.addEventListener('click', () => {
+      navMenu?.classList.toggle('show');
+    });
   });
 </script>
+
 <main>
 <section id="overview" style="padding: 2em 1em; max-width: 900px; margin: 0 auto;">
   <h1>Stake 娛樂城是什麼？全球最夯加密貨幣賭場平台介紹</h1>
@@ -634,16 +667,38 @@ img {
 
 </style>
 
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('nav a').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const targetID = href.substring(1);
+          const targetSection = document.getElementById(targetID);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      }
+    });
+
     const items = document.querySelectorAll('.promo-item');
     items.forEach(item => {
       item.addEventListener('animationend', () => {
         item.classList.add('floating');
       }, { once: true });
     });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    menuToggle?.addEventListener('click', () => {
+      navMenu?.classList.toggle('show');
+    });
   });
 </script>
+
 <section id="deposit" aria-label="Stake 娛樂城獎勵介紹" style="padding: 2em 1em; max-width: 900px; margin: 0 auto;">
   <!-- 圖片置中顯示 -->
   <div style="text-align: center; margin-bottom: 1.5em;">
