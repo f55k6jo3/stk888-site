@@ -321,6 +321,20 @@ tbody tr:nth-child(even) {
     margin-top: 2em;
   }
 }
+
+@media (max-width: 600px) {
+  body, main, section, h2, h3, p, .promo-item, .promo-codes {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  body {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  h2, h3 {
+    font-size: 1.3rem;
+  }
+}
 </style>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
