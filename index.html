@@ -257,6 +257,58 @@ tbody tr:nth-child(even) {
   font-size: 0.85rem;
   margin-left: 10px;
 }
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 10px;
+  }
+  h1, h2, h3 {
+    font-size: 1.4rem;
+  }
+  .promo-item h3 {
+    font-size: 1.2rem;
+  }
+  .promo-item p, .card .item {
+    font-size: 1rem;
+  }
+  nav a {
+    font-size: 0.95rem;
+    padding: 0.5em;
+  }
+}
+
+.mobile-card-list {
+  display: none;
+}
+@media (max-width: 768px) {
+  .desktop-table {
+    display: none;
+  }
+  .mobile-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-top: 2em;
+  }
+  .mobile-card-list .card {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  .mobile-card-list .card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #0044cc;
+  }
+  .mobile-card-list .card .item {
+    margin: 0.5em 0;
+    font-size: 1rem;
+  }
+}
 </style>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -442,7 +494,6 @@ img {
 </script>
 <main>
 <section id="overview" style="padding: 2em 1em; max-width: 900px; margin: 0 auto;">
-
 <p>
   玩台灣娛樂城是不是常常怕「贏太多就不讓你出金」？帳號被凍、提款卡關、倍率亂改，簡直像在賭命不是賭博。
 </p>
@@ -556,7 +607,30 @@ img {
 </tr>
 </tbody>
 </table>
-</div></section>
+</div>
+<div class="mobile-card-list">
+<div class="card">
+<h3>🎰 遊戲公平性</h3>
+<div class="item"><strong>台版娛樂城：</strong>無機率公開，易作弊</div>
+<div class="item"><strong>Stake：</strong>開源公平驗證機制 ✅ WIN</div>
+</div>
+<div class="card">
+<h3>💸 出金速度</h3>
+<div class="item"><strong>台版娛樂城：</strong>出金不穩定，常卡帳</div>
+<div class="item"><strong>Stake：</strong>加密貨幣 15 分鐘內完成 ✅ WIN</div>
+</div>
+<div class="card">
+<h3>🌏 合法性</h3>
+<div class="item"><strong>台版娛樂城：</strong>無執照，黑網充斥</div>
+<div class="item"><strong>Stake：</strong>持庫拉索合法賭照 ✅ WIN</div>
+</div>
+<div class="card">
+<h3>🎁 優惠透明度</h3>
+<div class="item"><strong>台版娛樂城：</strong>優惠藏條款</div>
+<div class="item"><strong>Stake：</strong>即時返水、明確活動條件 ✅ WIN</div>
+</div>
+</div>
+</section>
 <section id="register">
 <section id="register">
 <h2>Stake 娛樂城手把手註冊教學</h2>
