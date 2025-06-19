@@ -309,6 +309,18 @@ tbody tr:nth-child(even) {
     font-size: 1rem;
   }
 }
+
+@media (max-width: 768px) {
+  .desktop-table {
+    display: none !important;
+  }
+  .mobile-card-list {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-top: 2em;
+  }
+}
 </style>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -496,7 +508,7 @@ img {
 <section id="overview" style="padding: 2em 1em; max-width: 900px; margin: 0 auto;">
 
   玩台灣娛樂城是不是常常怕「贏太多就不讓你出金」？帳號被凍、提款卡關、倍率亂改，簡直像在賭命不是賭博。
-</p>
+
 <p>
   今天介紹一個敢砸 <strong>一億美金找 Drake 代言</strong>，<strong>一年營收超過 26 億美元</strong>的超狂平台 — Stake 娛樂城。
 </p>
@@ -561,7 +573,7 @@ img {
 <h3>安全性與合法性</h3>
 <p>Stake 賭場持有庫拉索政府核發的 Antillephone NV 博彩執照，並遵守嚴格的規定及定期審核，確保平台的安全與合法性。</p>
 <section id="compare"><h2>台版娛樂城 vs Stake 娛樂城</h2><div class="table-container">
-<table>
+<table class="desktop-table">
 <thead>
 <tr>
 <th>項目</th>
