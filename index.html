@@ -335,6 +335,41 @@ tbody tr:nth-child(even) {
     font-size: 1.3rem;
   }
 }
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 0 10px;
+  }
+
+  section, main, .card, .promo-item, h2, h3, p, li, ul, ol {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  ol {
+    padding-left: 1.4em;
+  }
+
+  .card .item {
+    font-size: 1rem;
+  }
+
+  nav {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 </style>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
