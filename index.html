@@ -393,34 +393,9 @@ tbody tr:nth-child(even) {
   }
 }
 
-/* 桌機版顯示三卡 */
-.promo-cards-desktop {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-/* 手機合併單卡顯示 */
 .promo-box-mobile {
   display: none;
-  background-color: #fff4f4;
-  border-radius: 8px;
-  padding: 1.5em;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  font-size: 1rem;
-  color: #cc0000;
-  line-height: 1.6;
-  margin: 1em auto;
 }
-.promo-box-mobile h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
-  color: #cc0000;
-}
-.promo-box-mobile ul {
-  padding-left: 1.2em;
-}
-/* 手機切換顯示卡片為單卡 */
 @media (max-width: 600px) {
   .promo-cards-desktop {
     display: none;
@@ -788,7 +763,7 @@ img {
 <h3>📣 優惠三</h3>
 <p>社群獨家教學與不定期活動</p>
 </div>
-</div><div class="promo-box-mobile"><h3>🎁 推薦碼專屬優惠</h3><ul><li>優惠一：免費贈送 $10 美金</li><li>優惠二：返水加倍至 5%</li><li>優惠三：社群獨家教學與不定期活動</li></ul></div>
+</div>
 <p><strong>推薦碼：</strong>請在註冊時輸入推薦碼 <strong>STK888</strong>，享有專屬優惠。</p>
 <p><strong>注意事項：</strong>推薦碼只可在帳號建立後24小時內使用。</p>
 </section>
@@ -878,6 +853,38 @@ img {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+
+@media (max-width: 600px) {
+  .promo-codes {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .promo-item {
+    border-top: 1px dashed #cc0000;
+    border-bottom: none;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 1em 1em;
+    background-color: #fff4f4;
+  }
+
+  .promo-item:first-child {
+    border-top: none;
+  }
+
+  .promo-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3em;
+  }
+
+  .promo-item p {
+    font-size: 0.95rem;
+    margin-bottom: 1em;
+  }
 }
 
 </style>
