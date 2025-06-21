@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 <html lang="zh-Hant">
@@ -735,26 +734,65 @@ img {
     <li>登入後，可以進行存款與開始遊戲。</li>
 </li></ol>
 <main>
-<section id="promo">
-<h2>推薦碼專屬優惠</h2>
-<!-- 這裡放優惠三欄區塊 -->
-<div class="promo-codes">
-<div class="promo-item d-none d-md-block" style="--order: 1;">
+
+<div class="promo-section">
+<h2 class="title">推薦碼專屬優惠</h2>
+<!-- 手機版：合併卡片 -->
+<div class="card mobile-only">
+<h3>🎁 推薦碼專屬優惠</h3>
+<p>✅ 優惠一：免費贈送 $10 美金</p>
+<p>✅ 優惠二：返水加倍至 5%</p>
+<p>✅ 優惠三：社群獨家教學與不定期活動</p>
+</div>
+<!-- 桌機版：三張分卡 -->
+<div class="card desktop-only">
 <h3>🎁 優惠一</h3>
 <p>免費贈送 $10 美金</p>
 </div>
-<div class="promo-item d-none d-md-block" style="--order: 2;">
+<div class="card desktop-only">
 <h3>💰 優惠二</h3>
 <p>返水加倍至 5%</p>
 </div>
-<div class="promo-item d-none d-md-block" style="--order: 3;">
+<div class="card desktop-only">
 <h3>📣 優惠三</h3>
 <p>社群獨家教學與不定期活動</p>
 </div>
 </div>
-<p><strong>推薦碼：</strong>請在註冊時輸入推薦碼 <strong>STK888</strong>，享有專屬優惠。</p>
-<p><strong>注意事項：</strong>推薦碼只可在帳號建立後24小時內使用。</p>
-</section>
+<style>
+  .card {
+    background: #ffecec;
+    border-radius: 12px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+  .card h3 {
+    color: #c00;
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+  }
+  .card p {
+    margin: 0.4em 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #c00;
+  }
+  .mobile-only {
+    display: none;
+  }
+  .desktop-only {
+    display: block;
+  }
+  @media screen and (max-width: 768px) {
+    .mobile-only {
+      display: block;
+    }
+    .desktop-only {
+      display: none;
+    }
+  }
+</style>
+
 <style>
   .promo-codes {
     display: flex;
