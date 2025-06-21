@@ -392,41 +392,6 @@ tbody tr:nth-child(even) {
     margin-bottom: 2em;
   }
 }
-
-/* 桌機三卡、手機單卡切換 */
-.promo-cards-desktop {
-  display: flex;
-  gap: 20px;
-}
-.promo-box-mobile {
-  display: none;
-}
-@media (max-width: 600px) {
-  .promo-cards-desktop {
-    display: none;
-  }
-  .promo-box-mobile {
-    display: block;
-    background: #ffecec;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 20px auto;
-    font-size: 1rem;
-    color: #c00;
-    max-width: 90%;
-  }
-  .promo-box-mobile .item {
-    padding: 10px 0;
-    border-bottom: 1px dashed #cc0000;
-  }
-  .promo-box-mobile .item:last-child {
-    border-bottom: none;
-  }
-  .promo-box-mobile .title {
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-}
 </style>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -772,32 +737,17 @@ img {
 <main>
 <section id="promo">
 <h2>推薦碼專屬優惠</h2>
-<div class="promo-box-mobile">
-<div class="item">
-<div class="title">🎁 優惠一</div>
-<div>免費贈送 $10 美金</div>
-</div>
-<div class="item">
-<div class="title">💰 優惠二</div>
-<div>返水加倍至 5%</div>
-</div>
-<div class="item">
-<div class="title">📣 優惠三</div>
-<div>社群獨家教學與不定期活動</div>
-</div>
-</div>
-
 <!-- 這裡放優惠三欄區塊 -->
 <div class="promo-codes">
-<div class="promo-item" style="--order: 1;">
+<div class="promo-item d-none d-md-block" style="--order: 1;">
 <h3>🎁 優惠一</h3>
 <p>免費贈送 $10 美金</p>
 </div>
-<div class="promo-item" style="--order: 2;">
+<div class="promo-item d-none d-md-block" style="--order: 2;">
 <h3>💰 優惠二</h3>
 <p>返水加倍至 5%</p>
 </div>
-<div class="promo-item" style="--order: 3;">
+<div class="promo-item d-none d-md-block" style="--order: 3;">
 <h3>📣 優惠三</h3>
 <p>社群獨家教學與不定期活動</p>
 </div>
