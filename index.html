@@ -393,6 +393,11 @@ tbody tr:nth-child(even) {
   }
 }
 
+/* 桌機三卡、手機單卡切換 */
+.promo-cards-desktop {
+  display: flex;
+  gap: 20px;
+}
 .promo-box-mobile {
   display: none;
 }
@@ -402,6 +407,24 @@ tbody tr:nth-child(even) {
   }
   .promo-box-mobile {
     display: block;
+    background: #ffecec;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    font-size: 1rem;
+    color: #c00;
+    max-width: 90%;
+  }
+  .promo-box-mobile .item {
+    padding: 10px 0;
+    border-bottom: 1px dashed #cc0000;
+  }
+  .promo-box-mobile .item:last-child {
+    border-bottom: none;
+  }
+  .promo-box-mobile .title {
+    font-weight: bold;
+    font-size: 1.1rem;
   }
 }
 </style>
@@ -749,6 +772,21 @@ img {
 <main>
 <section id="promo">
 <h2>推薦碼專屬優惠</h2>
+<div class="promo-box-mobile">
+<div class="item">
+<div class="title">🎁 優惠一</div>
+<div>免費贈送 $10 美金</div>
+</div>
+<div class="item">
+<div class="title">💰 優惠二</div>
+<div>返水加倍至 5%</div>
+</div>
+<div class="item">
+<div class="title">📣 優惠三</div>
+<div>社群獨家教學與不定期活動</div>
+</div>
+</div>
+
 <!-- 這裡放優惠三欄區塊 -->
 <div class="promo-codes">
 <div class="promo-item" style="--order: 1;">
@@ -853,38 +891,6 @@ img {
   height: auto;
   display: block;
   margin: 0 auto;
-}
-
-
-@media (max-width: 600px) {
-  .promo-codes {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .promo-item {
-    border-top: 1px dashed #cc0000;
-    border-bottom: none;
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 1em 1em;
-    background-color: #fff4f4;
-  }
-
-  .promo-item:first-child {
-    border-top: none;
-  }
-
-  .promo-item h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.3em;
-  }
-
-  .promo-item p {
-    font-size: 0.95rem;
-    margin-bottom: 1em;
-  }
 }
 
 </style>
